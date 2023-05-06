@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Login</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+      <ion-item>
+      <ion-card>
+        <ion-label position="floating" >
+         Usuario
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="login.user"></ion-input>
+      </ion-card>
+    </ion-item>
+    <ion-item>
+      <ion-card>
+        <ion-label position="floating">
+         Clave
+        </ion-label>
+        <ion-input type="password" [(ngModel)]="login.pass"></ion-input>
+      </ion-card>
+    </ion-item>
+    <ion-item>
+      <ion-card>    
+       <ion-button  color="danger" (click)="getData()">
+        <ion-icon name="Inicio" ></ion-icon>
+        Iniciar Sesion
+        </ion-button> 
+        <!-- <ion-button  color="primary"  >
+          <ion-icon name="Registrar" ></ion-icon>
+          Registrar
+          </ion-button>  -->
+      </ion-card>
+    </ion-item>
+ 
+</ion-content>

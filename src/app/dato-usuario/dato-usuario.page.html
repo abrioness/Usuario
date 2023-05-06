@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registrar Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-item>
+  <ion-card>
+    <ion-label>
+     1er Nombre
+    </ion-label>
+    <ion-input type="text" [(ngModel)]="data.pnom" ></ion-input>
+  </ion-card>
+</ion-item>
+<ion-item>
+  <ion-card>
+    <ion-label>
+     2do Nombre
+    </ion-label>
+    <ion-input type="text" [(ngModel)]="data.snom"></ion-input>
+  </ion-card>
+</ion-item>
+<ion-item>
+  <ion-card>
+    <ion-label>
+      1er Apellido
+    </ion-label>
+    <ion-input type="text" [(ngModel)]="data.pape" ></ion-input>
+  </ion-card>
+</ion-item>
+<ion-item>
+  <ion-card>
+    <ion-label>
+     2do Apellido
+    </ion-label>
+    <ion-input type="text" [(ngModel)]="data.sape"></ion-input>
+  </ion-card>
+</ion-item>
+<ion-item>
+  <ion-card>
+    <ion-label>
+     Nombre de Usuario
+    </ion-label>
+    <ion-input type="text" [(ngModel)]="data.nusu" ></ion-input>
+  </ion-card>
+</ion-item>
+<ion-item>
+  <ion-card>
+    <ion-label>
+     Clave
+    </ion-label>
+    <ion-input type="password" [(ngModel)]="data.pass" ></ion-input>
+  </ion-card>
+</ion-item>
+<ion-item>
+  <ion-card>
+    <ion-label>
+      Correo
+    </ion-label>
+    <ion-input type="text" [(ngModel)]="data.email" ></ion-input>
+  </ion-card>
+</ion-item>
+<ion-item>
+  <ion-card>
+    <ion-label>
+      Telefono
+    </ion-label>
+    <ion-input type="text" [(ngModel)]="data.ntel" ></ion-input>
+  </ion-card>
+</ion-item>
+
+<ion-item>
+  <ion-card>    
+   <ion-button  color="primary" (click)="ValUsu()">
+    <ion-icon name="save"></ion-icon>
+    Registrar
+    </ion-button> 
+  </ion-card>
+</ion-item>
+</ion-content>
