@@ -1,0 +1,39 @@
+
+.content {
+    min-width: 300px;
+    max-width: 80%;
+    margin: 0px auto;
+    background: rgba(81, 10, 10, 0.15);
+    padding: 2rem 3rem;
+    margin: auto;
+    border-radius: 2.5rem;
+    background-color: #750d0d;
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+    color: black;
+    margin-top: 5rem;
+    
+  }
+
+.fil-button{
+  min-width: 300px;
+    max-width: 80%;
+    margin: 0px auto;    
+  border-radius: 2.5rem;
+  padding: 2rem 3rem;
+  
+  
+}
+
+.itembutt{
+  //border-radius: 2.5rem;
+  align-items: center;
+}
+
+ion-toggle {
+  --handle-background-checked: #1052a9 url("/src/assets/icon/favicon.png") no-repeat center / contain;
+
+   }
+
+   table{
+    background: rgba(81, 10, 10, 0.15);
+   }

@@ -1,13 +1,88 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Factura</ion-title>
+    <ion-title><ion-item>Factura<ion-avatar >
+      <img alt="UNPGGL" src="../assets/icon/favicon.png" />
+    </ion-avatar>
+  </ion-item></ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Factura</ion-title>
+      <ion-title size="large">Datos del Estudiante</ion-title>
     </ion-toolbar>
   </ion-header>
+  <div>
+<ion-item>
+  <ion-card>
+<ion-label  >
+  Recibi de
+</ion-label >
+<ion-input type="text"></ion-input>
+</ion-card>
+  <ion-card slot="end">
+<ion-label  >
+  Por cuenta de
+</ion-label>
+<ion-input type="text"></ion-input>
+</ion-card>
+</ion-item>
+<ion-item>
+  <ion-card >
+<ion-label>
+  Dirección
+</ion-label>
+<ion-input type="text"></ion-input>
+</ion-card>
+  <ion-card slot="end">
+<ion-label  >
+  Carrera
+</ion-label>
+<ion-input type="text"></ion-input>
+</ion-card>
+</ion-item>
+
+<ion-item>  
+  <ion-card>
+    <ion-label  >
+      No. Carnet
+    </ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-card>
+
+  <ion-card slot="end">
+<ion-label  >
+  Modalidad
+</ion-label>
+<ion-input type="text"></ion-input>
+</ion-card>
+</ion-item>
+<ion-item>
+  <ion-card>
+<ion-label >
+  Fecha de Pago
+</ion-label>
+<ion-input type="date" ></ion-input>
+</ion-card>
+
+<ion-list slot="end">
+  <ion-item>
+    <ion-select aria-label="Año Academico:" placeholder="Select Año academico">
+      <ion-select-option value="2025">2025</ion-select-option>
+      <ion-select-option value="2024">2024</ion-select-option>
+      <ion-select-option value="2023">2023</ion-select-option>
+      <ion-select-option value="2022">2022</ion-select-option>
+      <ion-select-option value="2021">2021</ion-select-option>
+      <ion-select-option value="2020">2020</ion-select-option>
+      <ion-select-option value="2019">2019</ion-select-option>
+      <ion-select-option value="2018">2018</ion-select-option>
+      <ion-select-option value="2017">2017</ion-select-option>
+      <ion-select-option value="2016">2016</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+</ion-item>
+</div>
 </ion-content>

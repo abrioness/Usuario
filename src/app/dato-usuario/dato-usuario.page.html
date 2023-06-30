@@ -1,70 +1,70 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Registrar Usuario</ion-title>
+    <ion-title><ion-item>Registrar Usuario<ion-avatar >
+      <img alt="UNPGGL" src="../assets/icon/favicon.png" />
+    </ion-avatar>
+  </ion-item></ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-<ion-item>
+  <div>
+<ion-item position="floating">
   <ion-card>
-    <ion-label>
-     1er Nombre
+    <ion-label >
+     Primer Nombre
     </ion-label>
-    <ion-input type="text" [(ngModel)]="data.pnom" ></ion-input>
+    <ion-input type="text" [(ngModel)]="data.pnom" requiered="true"></ion-input>
   </ion-card>
-</ion-item>
-<ion-item>
-  <ion-card>
-    <ion-label>
-     2do Nombre
+
+  <ion-card slot="end">
+    <ion-label >
+     Segundo Nombre
     </ion-label>
     <ion-input type="text" [(ngModel)]="data.snom"></ion-input>
   </ion-card>
 </ion-item>
-<ion-item>
+<ion-item >
   <ion-card>
-    <ion-label>
-      1er Apellido
+    <ion-label >
+      Primer Apellido
     </ion-label>
     <ion-input type="text" [(ngModel)]="data.pape" ></ion-input>
   </ion-card>
-</ion-item>
-<ion-item>
-  <ion-card>
-    <ion-label>
-     2do Apellido
+
+
+  <ion-card slot="end">
+    <ion-label >
+     Segundo Apellido
     </ion-label>
     <ion-input type="text" [(ngModel)]="data.sape"></ion-input>
   </ion-card>
 </ion-item>
-<ion-item>
+<ion-item >
   <ion-card>
-    <ion-label>
+    <ion-label >
      Nombre de Usuario
     </ion-label>
     <ion-input type="text" [(ngModel)]="data.nusu" ></ion-input>
   </ion-card>
-</ion-item>
-<ion-item>
-  <ion-card>
-    <ion-label>
-     Clave
+
+  <ion-card slot="end">
+    <ion-label >
+     Contraseña
     </ion-label>
     <ion-input type="password" [(ngModel)]="data.pass" ></ion-input>
   </ion-card>
 </ion-item>
-<ion-item>
+<ion-item >
   <ion-card>
-    <ion-label>
+    <ion-label >
       Correo
     </ion-label>
     <ion-input type="text" [(ngModel)]="data.email" ></ion-input>
   </ion-card>
-</ion-item>
-<ion-item>
-  <ion-card>
+  <ion-card slot="end">
     <ion-label>
-      Telefono
+      Contacto
     </ion-label>
     <ion-input type="text" [(ngModel)]="data.ntel" ></ion-input>
   </ion-card>
@@ -74,8 +74,9 @@
   <ion-card>    
    <ion-button  color="primary" (click)="ValUsu()">
     <ion-icon name="save"></ion-icon>
-    Registrar
+    Registar
     </ion-button> 
   </ion-card>
 </ion-item>
+</div>
 </ion-content>

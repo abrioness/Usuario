@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { url } from 'inspector';
+import { title } from 'process';
+import { find } from 'rxjs';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -6,13 +9,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Login', url: '/dato-usuario/dato-usuario', icon: 'email' },
-    { title: 'Outbox', url: '/folder/outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/spam', icon: 'warning' },
+    { title: 'Crear Usuario', url: 'dato-usuario', icon: 'person-add' },
+    { title: 'Factura', url: 'factura', icon: 'cash' },
+    { title: 'Recibo', url: 'recibo', icon: 'card' },
+    { title: 'Archivo', url: '/folder/archived', icon: 'archive' },
+    { title: 'Informe', url: 'reporte', icon: 'list' },
+    { title: 'Correo', url: 'correo', icon: 'mail' },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+  public labels = [{logo:'TikTok',url:'',icon:'logo-tiktok'},{logo:'Twitter',url:'',icon:'logo-twitter'},{logo:'Facebook',url:'',icon:'logo-facebook'},{logo:'Youtube',url:'',icon: 'logo-youtube'},{icon:'Travel'},{icon:'Reminders'}];
   constructor() {}
+
+  
 }

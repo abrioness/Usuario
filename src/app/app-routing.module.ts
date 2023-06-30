@@ -8,11 +8,6 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
-  },
-  
-  {
     path: 'dato-usuario',
     loadChildren: () => import('./dato-usuario/dato-usuario.module').then( m => m.DatoUsuarioPageModule)
   },
@@ -23,6 +18,10 @@ const routes: Routes = [
   {
     path: 'factura',
     loadChildren: () => import('./factura/factura.module').then( m => m.FacturaPageModule)
+  },
+  {
+    path: 'recibo',
+    loadChildren: () => import('./recibo/recibo.module').then( m => m.ReciboPageModule)
   }
 ];
 

@@ -1,0 +1,317 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+    <ion-item>Recibo<ion-avatar >
+      <img alt="UNPGGL" src="../assets/icon/favicon.png" />
+    </ion-avatar>
+  </ion-item>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ <!-- <mdb-carousel [controls]="true" [indicators]="true" [animation]="'fade'">
+    <mdb-carousel-item>
+      <img
+        src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).webp"
+        class="d-block w-100"
+        alt="..."
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </div>
+    </mdb-carousel-item>
+     <mdb-carousel-item>
+      <img
+        src="https://mdbootstrap.com/img/Photos/Slides/img%20(22).webp"
+        class="d-block w-100"
+        alt="..."
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </mdb-carousel-item>
+    <mdb-carousel-item>
+      <img
+        src="https://mdbootstrap.com/img/Photos/Slides/img%20(23).webp"
+        class="d-block w-100"
+        alt="..."
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      </div>
+    </mdb-carousel-item>
+  </mdb-carousel>  -->
+  <div class="content">
+  <ion-header collapse="">
+    <ion-toolbar>
+      <ion-title size="large">
+        <ion-item>
+        <h1>Recibo Oficial de Caja</h1><ion-avatar>
+        <img alt="UNPGGL" src="../assets/icon/favicon.png" />
+      </ion-avatar>
+    </ion-item>
+  </ion-title>
+    </ion-toolbar>
+    <ion-item>
+      <ion-card>
+        <ion-label >
+          <h1 class="numrec">  Número de Recibo:</h1>
+          </ion-label>  
+      </ion-card>
+    <ion-card>          
+      <ion-label >
+      <h1 class="num_rec"> </h1>
+      </ion-label>
+    </ion-card>
+  </ion-item>
+  </ion-header>
+<ion-item-group>
+  <ion-item-divider>
+    <ion-label><h1>Datos del Recibo</h1></ion-label>
+  </ion-item-divider>
+<ion-item lines="none">
+<ion-card>
+<ion-label >
+  Nombre del Estudiante
+</ion-label>
+  <ion-input type="text">    
+  </ion-input>
+</ion-card>
+<ion-card slot="end">
+  <ion-label >
+   Monto
+  </ion-label>  
+    <ion-input type="text">
+    </ion-input>
+  </ion-card>
+</ion-item>
+<ion-item lines="none">
+  <ion-card slot="start">
+    <ion-label >
+      Numero de Factura
+    </ion-label>
+      <ion-input type="text">
+        
+      </ion-input>
+    </ion-card>
+  <ion-card slot="end">
+      <ion-label >
+        Cantidad C$
+      </ion-label>
+        <ion-input type="text">
+        </ion-input>
+    </ion-card>
+    <ion-card slot="end">
+    <ion-label >
+      Cantidad U$
+    </ion-label>
+      <ion-input type="text">
+        
+      </ion-input>
+    </ion-card>
+  </ion-item>
+</ion-item-group>
+
+<ion-item-group >
+  <!-- <ion-item-divider>
+    <ion-label><h1>Ingresos</h1></ion-label>
+  </ion-item-divider> -->
+  <ion-item-divider>
+    <ion-label></ion-label>
+    <ion-toggle [(ngModel)]="check_ingre" [checked]="check_ingre" color="danger"><h2>Ingresos</h2></ion-toggle><br /><br />
+  </ion-item-divider>
+  <div name="ingresos" *ngIf="check_ingre==true hidden">
+  <ion-item lines="none">
+    <ion-card>
+      <ion-checkbox>
+      <ion-label>
+        Primer abono
+      </ion-label>      
+    </ion-checkbox>
+    <ion-input type="text"></ion-input>
+    </ion-card>
+    <ion-card>
+      <ion-checkbox>
+      <ion-label>
+        Segundo abono
+      </ion-label>      
+    </ion-checkbox>
+    <ion-input type="text"></ion-input>
+    </ion-card>
+    <ion-card>
+      <ion-checkbox>
+      <ion-label>
+        Tercer abono
+      </ion-label>      
+    </ion-checkbox>
+    <ion-input type="text"></ion-input>
+    </ion-card>
+    
+  </ion-item>
+  <ion-item lines="none">
+    <ion-card>
+      <ion-checkbox>
+      <ion-label>
+       Cancelar el Mes
+      </ion-label>      
+    </ion-checkbox>    
+    </ion-card>
+    <ion-card>
+      <ion-checkbox>
+      <ion-label>
+        Multa
+      </ion-label>      
+    </ion-checkbox>    
+    </ion-card>
+    <ion-card>
+      <ion-checkbox>
+      <ion-label>
+       Otro Concepto
+      </ion-label>      
+    </ion-checkbox>
+    <ion-input type="text"></ion-input>
+    </ion-card>  
+  </ion-item>
+</div>
+</ion-item-group>
+
+
+<ion-item-divider>
+  <ion-label></ion-label>
+  <ion-toggle [(ngModel)]="check_os" [checked]="check_os" color="danger"><h2>Otros Servicios</h2></ion-toggle><br /><br />
+</ion-item-divider>
+
+<table *ngIf="check_os==true hidden" >
+  <tr>
+    <td>
+      
+      <ion-card>
+        <ion-checkbox>
+        <ion-label>Mantenimiento de Biblioteca</ion-label>
+      </ion-checkbox>
+      </ion-card>
+      
+    </td>
+    <td>
+      
+      <ion-card>
+        <ion-checkbox>
+        <ion-label>Papeleria</ion-label>      
+      </ion-checkbox>
+      </ion-card>
+    
+    </td>
+    <td>
+     
+      <ion-card>
+        <ion-checkbox>
+        <ion-label>Proforma</ion-label>      
+      </ion-checkbox>
+      </ion-card>
+    </td>
+    
+  </tr>
+
+  <tr>
+    <td>
+      <ion-card>          
+        <ion-checkbox>
+        <ion-label>C/Nivelación</ion-label>      
+      </ion-checkbox>
+      </ion-card>
+  </td>
+    <td>
+      
+        <ion-card slot="start">
+          <ion-checkbox>
+          <ion-label>Programa de Atención Médica Interna</ion-label>
+        </ion-checkbox>
+        </ion-card>
+     
+    </td>
+    <td>
+      
+      <ion-card slot="end">
+        <ion-checkbox>
+        <ion-label>Retiro de Expediente</ion-label>      
+      </ion-checkbox>
+      </ion-card>
+    
+    </td>
+   
+  </tr>
+
+  <tr>
+    <td>
+      <ion-card >
+        <ion-checkbox>
+        <ion-label>Convalidación</ion-label>      
+      </ion-checkbox>
+      <ion-input type="text"></ion-input>
+      </ion-card>
+    </td>
+    <td>
+     
+        <ion-card >
+          <ion-checkbox>
+          <ion-label>Examen de Reprogramacón</ion-label>          
+        </ion-checkbox>
+        <ion-input type="text"></ion-input>
+        </ion-card>
+      
+    </td>
+    <td>
+      
+      <ion-card>
+        <ion-checkbox>
+        <ion-label>Clases Extras</ion-label>      
+      </ion-checkbox>
+      <ion-input type="text"></ion-input>
+      </ion-card>
+    </td>
+    
+  </tr>
+ 
+</table>
+
+
+
+
+  <ion-item class="itembutt">
+    <ion-card>    
+     <ion-button  color="secondary" >
+      <ion-icon name="save"></ion-icon>
+      Guardar
+      </ion-button> 
+    </ion-card>
+    <ion-card>    
+      <ion-button  color="success" >
+       <ion-icon name="add"></ion-icon>
+       Nuevo
+       </ion-button> 
+     </ion-card>
+     <ion-card>    
+      <ion-button  color="danger" >
+       <ion-icon name="close"></ion-icon>
+       Salir
+       </ion-button> 
+     </ion-card>
+     <ion-card>    
+      <ion-button  color="medium" >
+       <ion-icon name="logo-usd"></ion-icon>
+       Tipo Cambio
+       </ion-button> 
+     </ion-card>
+     <ion-card>    
+      <ion-button  color="light" >
+       <ion-icon name="print"></ion-icon>
+       Imprimir
+       </ion-button> 
+     </ion-card>
+  </ion-item>
+</div>
+</ion-content>

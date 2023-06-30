@@ -5,7 +5,7 @@ import { RequestOptions } from 'http';
 import { map, tap, switchMap } from 'rxjs/operators';
 import { BehaviorSubject, from, Observable, Subject } from 'rxjs';
 
-
+import * as XLSX from 'xlsx';
 
 const TOKEN_KEY = 'my-token';
 
@@ -93,5 +93,15 @@ export class UsrService {
 	// 	this.isAuthenticated.next(false);
 	// 	return Storage.remove({ key: TOKEN_KEY });
 	// }
-  
+
+
+//Exportar archivo Excel
+  async exportToExcel(data:any, filename:any) {
+    {
+    const ws: XLSX.WorkSheet = XLSX.utils.json_to_sheet(data);
+    const wb: XLSX.WorkBook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, filename);
+    XLSX.writeFile(wb, filename + '.xlsx');
+    }
+  }
 }
